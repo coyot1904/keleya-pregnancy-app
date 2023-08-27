@@ -15,13 +15,12 @@ This project aims to be a strong foundation for react-native applications. It pr
 
 ## Base dependencies
 
-- [@react-native-picker/picker]([https://www.npmjs.com/package/@react-native-picker/picker]) 
-- [@react-navigation/native-stack]([https://www.npmjs.com/package/@react-navigation/native-stack]) 
-- [react-native-check-box]([https://www.npmjs.com/package/react-native-check-box]) 
-- [react-native-date-picker]([https://www.npmjs.com/package/react-native-date-picker]) 
-- [react-native-safe-area-context]([https://www.npmjs.com/package/react-native-safe-area-context) 
+- [@react-native-picker/picker](https://www.npmjs.com/package/@react-native-picker/picker) 
+- [@react-navigation/native-stack](https://www.npmjs.com/package/@react-navigation/native-stack) 
+- [react-native-check-box](https://www.npmjs.com/package/react-native-check-box) 
+- [react-native-date-picker](https://www.npmjs.com/package/react-native-date-picker) 
+- [react-native-safe-area-context](https://www.npmjs.com/package/react-native-safe-area-context) 
 
-## Usage
 
 ## Folder structure
 
