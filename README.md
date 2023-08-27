@@ -1,79 +1,81 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Keleya Project
 
-# Getting Started
+[![Moove It](https://circleci.com/gh/moove-it/react-native-template.svg?style=svg)]([https://github.com/coyot1904/keleya-pregnancy-app])
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+This project aims to be a strong foundation for react-native applications. It provides a clear and organized structure, core dependencies, and boilerplate to jumpstart development.
 
-## Step 1: Start the Metro Server
+## Prerequisites
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+- [Node.js > 12](https://nodejs.org) and npm (Recommended: Use [nvm](https://github.com/nvm-sh/nvm))
+- [Watchman](https://facebook.github.io/watchman)
+- [Xcode 12](https://developer.apple.com/xcode)
+- [Cocoapods 1.10.1](https://cocoapods.org)
+- [JDK > 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+- [Android Studio and Android SDK](https://developer.android.com/studio)
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## Base dependencies
 
-```bash
-# using npm
-npm start
+- [@react-native-picker/picker]([https://www.npmjs.com/package/@react-native-picker/picker]) 
+- [@react-navigation/native-stack]([https://www.npmjs.com/package/@react-navigation/native-stack]) 
+- [react-native-check-box]([https://www.npmjs.com/package/react-native-check-box]) 
+- [react-native-date-picker]([https://www.npmjs.com/package/react-native-date-picker]) 
+- [react-native-safe-area-context]([https://www.npmjs.com/package/react-native-safe-area-context) 
 
-# OR using Yarn
-yarn start
-```
+## Usage
 
-## Step 2: Start your Application
+## Folder structure
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+This template follows a very simple project structure:
 
-### For Android
+- `src`: This folder is the main container of all the code inside your application.
+  - `Assets`: Asset folder to store all images, const, etc.
+  - `Components`: Folder to store any common component that you use through your app (such as a generic button)
+  - `Screens`: Folder that contains all your application screens/features.
+  - `App.js`: Main component that starts your whole app.
+  - `index.js`: Entry point of your application as per React-Native standards.
 
-```bash
-# using npm
-npm run android
 
-# OR using Yarn
-yarn android
-```
+## Setup environments
 
-### For iOS
+There is a file under .env than you will find all const used into app
 
-```bash
-# using npm
-npm run ios
 
-# OR using Yarn
-yarn ios
-```
+## Styleguide
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+For coding styling, we decided to go with ESLint and [React Native community's styleguide](https://github.com/facebook/react-native/tree/master/packages/eslint-config-react-native-community#readme).
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-## Step 3: Modifying your App
+## Components
 
-Now that you have successfully run the app, let's modify it.
+Components are the basic blocks of a react native application, but since we​​ aim to minimize development complexity, all the components are at the same nesting level.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+Another important thing is the use of propTypes to check the kind of data that your components need to work properly. If the component receives some data from others, the type of these props must be defined, and in case you need it the default value of the property too.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+List of Components : 
+- KChekbox
+- KHeader
+- KStep
+- KSubmit
+- KTextInput
 
-## Congratulations! :tada:
+### Static resources:
 
-You've successfully run and modified your React Native App. :partying_face:
+To keep an application scalable and organized, the global static resources that are used in the application have to be created in a specific file.
 
-### Now what?
+/Assets/Images/index.js
+/Assets/Constants/colors.js
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+### I manage three main folders for that:
 
-# Troubleshooting
+- Assets: Here you can store all the images  that you need through the app. 
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+- Components: This folder contains all the Components objects that you need to create a multilingual application. Create a file for each locale, inside define an object then maintain the nesting sorted by the screen that contains the text that you need and the text you want to show. As the last step, remember to create a reference inside the Localization.js file and add it to LocalizedStrings.
+- Screens : Here you can define all Screens into app
 
-# Learn More
 
-To learn more about React Native, take a look at the following resources:
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## Screens
+
+In this folder, you have the main objects to apply the composition architecture. Just create a folder for each screen you have in your application, call all the components and static resources you need to render the scene.
+
+To keep the structure, extract the styles from the main file and place it in a {namefileStyles.js} do the same for the set of tests needed for each screen with the file {index.js}
