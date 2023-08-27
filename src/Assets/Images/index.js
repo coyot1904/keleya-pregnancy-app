@@ -1,0 +1,11 @@
+export const AuthBG = require('./first-intro-image.png');
+export const LoginBG = require('./authentication-background-image.jpg');
+export const NameBG = require('./couch_smile.jpg');
+export const DateBG = require('./due-date-background-image.jpg');
+export const WorkoutBG = require('./workout-goal-background-image.jpg');
+export const SucessBG = require('./1.jpg');
+export const Logo = require('./keleya-logo.png');
+export const Back = require('./back.png');
+export const Show = require('./show.png');
+export const Hide = require('./hide.png');
+export const Bell = require('./bell.png');
